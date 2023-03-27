@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="binomialHeap" target="1.5" />
+      <module name="binomialHeap" target="19" />
     </bytecodeTargetLevel>
   </component>
 </project>
