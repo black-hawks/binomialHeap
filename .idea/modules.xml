@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/binomialHeap.iml" filepath="$PROJECT_DIR$/.idea/binomialHeap.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.metadata/.plugins/org.eclipse.egit.core/.org.eclipse.egit.core.cmp/.org.eclipse.egit.core.cmp.iml" filepath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.egit.core/.org.eclipse.egit.core.cmp/.org.eclipse.egit.core.cmp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BinomialHeap/BinomialHeap.iml" filepath="$PROJECT_DIR$/BinomialHeap/BinomialHeap.iml" />
+      <module fileurl="file://$PROJECT_DIR$/binomialHeap.iml" filepath="$PROJECT_DIR$/binomialHeap.iml" />
     </modules>
   </component>
 </project>
