@@ -45,13 +45,13 @@ public class SellBinomialMinHeap extends  BinomialHeap{
         }
     }
 
-    public double extractHighestPriorityElement() {
+    public BinomialHeapNode extractHighestPriorityElement() {
         if (Nodes == null)
-            return -1;
+            return null;
         BinomialHeapNode minNode = Nodes.findMinNode();
         reStructureHeapAfterExtract(minNode);
 
-        return minNode.key.getPrice();
+        return minNode;
     }
 
 

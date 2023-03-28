@@ -85,7 +85,6 @@ public abstract class BinomialHeap {
 
                     if (tmp == Nodes) {
                         Nodes = temp1;
-                    } else {
                     }
                 }
             }
@@ -102,36 +101,45 @@ public abstract class BinomialHeap {
         }
     }
 
-    // Method 5
-    // For union of nodes
+    /**
+     * To Join New Node with an Existing Heap
+     * @param newNode
+     */
     protected abstract void unionNodes(BinomialHeapNode newNode);
 
 
-    // To extract the node with the minimum key
-    public abstract double extractHighestPriorityElement();
+    /** To extract the node with the HighestPriority
+     *
+     * @return
+     */
+    public abstract BinomialHeapNode extractHighestPriorityElement();
 
-    protected void reStructureHeapAfterExtract(BinomialHeapNode minNode) {
+    protected void reStructureHeapAfterExtract(BinomialHeapNode priorityNode) {
         BinomialHeapNode temp = Nodes, prevTemp = null;
 
-        while (temp.key != minNode.key) {
+        // find the priorityNode in the tree
+        // if the Nodes is root element then priorityNode will be Nodes
+        // if the Nodes is not root element then priorityNode will be in first siblings
+        while (temp.key != priorityNode.key) {
             prevTemp = temp;
             temp = temp.sibling;
         }
-
+        // if priorityNode was root
         if (prevTemp == null) {
             Nodes = temp.sibling;
         } else {
+            // if priorityNode was in first sibling
             prevTemp.sibling = temp.sibling;
         }
 
         temp = temp.child;
         BinomialHeapNode fakeNode = temp;
-
+        // remove the parent of all sibling of temp
         while (temp != null) {
             temp.parent = null;
             temp = temp.sibling;
         }
-
+        //if there is no node left
         if ((Nodes == null) && (fakeNode == null)) {
             size = 0;
         } else {

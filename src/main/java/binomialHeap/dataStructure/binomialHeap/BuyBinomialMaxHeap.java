@@ -40,12 +40,12 @@ public class BuyBinomialMaxHeap extends BinomialHeap{
         }
     }
 
-    public double extractHighestPriorityElement() {
+    public BinomialHeapNode extractHighestPriorityElement() {
         if (Nodes == null)
-            return -1;
+            return null;
         BinomialHeapNode maxNode = Nodes.findMaxNode();
         reStructureHeapAfterExtract(maxNode);
 
-        return maxNode.key.getPrice();
+        return maxNode;
     }
 }
