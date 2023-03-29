@@ -28,7 +28,14 @@ public class DataGenerator {
   final static int MAX_RECORD_COUNT_PER_SECOND = 10000;
 
   public static void main(String args[]) {
-    String csvFile = "DataFile.csv";
+    String BuyerCsvFile = "BuyerDataFile.csv";
+    String SellerCsvFile = "SellerDataFile.csv";
+
+    generateCsvFile(BuyerCsvFile);
+    generateCsvFile(SellerCsvFile);
+  }
+
+  public static void generateCsvFile(String csvFile) {
 
     try(FileWriter writer = new FileWriter(csvFile)) {
       // code to generate the data randomly
@@ -59,6 +66,7 @@ public class DataGenerator {
         currentRecordCount = currentRecordCount + numberOfRecordsPerSecond;
       }
 
+      writer.close();
       System.out.println("CSV file created successfully.");
 
     } catch (IOException e) {
