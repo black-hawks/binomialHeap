@@ -45,4 +45,8 @@ public class Order {
                 '}';
     }
 
+    public void setQuantity(long quantity){
+        this.quantity = quantity;
+    }
+
 }

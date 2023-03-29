@@ -15,6 +15,8 @@ public class ClearingHouse {
     private final BinomialHashMap sellOrders;
     private final OrderReader buyReader;
     private final OrderReader sellReader;
+    private BinomialHashMap sellOrdersPostTransaction;
+    private BuyBinomialMaxHeap buyOrdersPostTransaction;
 
     public ClearingHouse() throws FileNotFoundException {
         this.buyOrders = new BuyBinomialMaxHeap();
@@ -24,8 +26,9 @@ public class ClearingHouse {
     }
 
     public void initMarket() throws IOException, ParseException {
-        fetchOrders();
-
+        while(true){
+            fetchOrders();  
+        }
     }
 
     private void fetchOrders() throws IOException, ParseException {
@@ -38,12 +41,37 @@ public class ClearingHouse {
             Order order = sellReader.getOrder();
             sellOrders.insert(order);
         }
+        if(buyOrdersPostTransaction != null){
+
+            buyOrders.merge(buyOrdersPostTransaction.getRoot());
+        }
+        if(sellOrdersPostTransaction != null){
+            sellOrders.merge(sellOrders);
+        }
+        performTransactions();
+
     }
 
     private void performTransactions() {
+        buyOrdersPostTransaction = new BuyBinomialMaxHeap();
+        sellOrdersPostTransaction = new BinomialHashMap();
         while(!buyOrders.isEmpty()){
             Order order = buyOrders.extractHighestPriorityElement().getKey();
+            Long quantity = sellOrders.fetchOrder(order.getPrice(),order.getQuantity());
+            if( quantity != null){
+                if(quantity == 0){
+                    buyOrders.extractHighestPriorityElement();
+                }else{
+                    order.setQuantity(quantity);
+                    buyOrdersPostTransaction.insert(order);
+                }
+               
+            }else{
+                 //insert the node inot the new binomial tree
+                 buyOrdersPostTransaction.insert(order);
+            }
 
         }
+        sellOrdersPostTransaction = sellOrders;
     }
 }

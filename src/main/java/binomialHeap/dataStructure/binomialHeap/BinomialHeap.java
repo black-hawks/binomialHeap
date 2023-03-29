@@ -50,7 +50,7 @@ public abstract class BinomialHeap {
 
     // Method 4
     // To unite two binomial heaps
-    protected void merge(BinomialHeapNode newNode) {
+    public void merge(BinomialHeapNode newNode) {
         BinomialHeapNode temp1 = Nodes, temp2 = newNode;
 
         while ((temp1 != null) && (temp2 != null)) {
@@ -172,5 +172,11 @@ public abstract class BinomialHeap {
             displayHeap(r.sibling);
         }
     }
+
+    public BinomialHeapNode getRoot() {
+        return Nodes;
+    }
+
+    
 }
 
