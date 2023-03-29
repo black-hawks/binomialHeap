@@ -3,14 +3,13 @@ package binomialHeap.dataStructure.binomialHeap;
 public class BinomialHeapNode {
 
     Order key;
-    int  degree;
+    int degree;
     BinomialHeapNode parent;
     BinomialHeapNode sibling;
     BinomialHeapNode child;
 
     // Constructor of this class
-    public BinomialHeapNode(Order order)
-    {
+    public BinomialHeapNode(Order order) {
 
         key = order;
         degree = 0;
@@ -19,10 +18,13 @@ public class BinomialHeapNode {
         child = null;
     }
 
+    public Order getKey() {
+        return key;
+    }
+
     // Method 1
     // To reverse
-    public BinomialHeapNode reverse(BinomialHeapNode sibling)
-    {
+    public BinomialHeapNode reverse(BinomialHeapNode sibling) {
         BinomialHeapNode ret;
         if (this.sibling != null)
             ret = this.sibling.reverse(this);
@@ -34,8 +36,7 @@ public class BinomialHeapNode {
 
     // Method 2
     // To find minimum node
-    public BinomialHeapNode findMinNode()
-    {
+    public BinomialHeapNode findMinNode() {
 
         // this keyword refers to current instance itself
         BinomialHeapNode x = this, y = this;
@@ -53,8 +54,7 @@ public class BinomialHeapNode {
         return y;
     }
 
-    public BinomialHeapNode findMaxNode()
-    {
+    public BinomialHeapNode findMaxNode() {
 
         // this keyword refers to current instance itself
         BinomialHeapNode x = this, y = this;
@@ -74,8 +74,7 @@ public class BinomialHeapNode {
 
     // Method 3
     // To find node with key value
-    public BinomialHeapNode findANodeWithKey(float price)
-    {
+    public BinomialHeapNode findANodeWithKey(float price) {
 
         BinomialHeapNode temp = this, node = null;
 
@@ -102,8 +101,7 @@ public class BinomialHeapNode {
 
     // Method 4
     // To get the size
-    public int getSize()
-    {
+    public int getSize() {
         return (
                 1 + ((child == null) ? 0 : child.getSize())
                         + ((sibling == null) ? 0 : sibling.getSize()));

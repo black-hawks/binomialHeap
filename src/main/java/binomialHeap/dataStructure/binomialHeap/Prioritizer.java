@@ -4,48 +4,48 @@ import java.util.Random;
 
 public class Prioritizer {
 
-    public static boolean minHeapPrioritizer(BinomialHeapNode newNode, BinomialHeapNode nextNode){
+    public static boolean minHeapPrioritizer(BinomialHeapNode newNode, BinomialHeapNode nextNode) {
 
-        Order newOrder = newNode.key, nextOrder= nextNode.key;
-        BinomialHeapNode firstNode=null, SecondNode=null;
+        Order newOrder = newNode.key, nextOrder = nextNode.key;
+        BinomialHeapNode firstNode = null, SecondNode = null;
 
         //case 1
-        if(newOrder.getPrice() < nextOrder.getPrice()){
-            firstNode= newNode;
+        if (newOrder.getPrice() < nextOrder.getPrice()) {
+            firstNode = newNode;
             SecondNode = nextNode;
-        }else if(newOrder.getPrice() == nextOrder.getPrice()){
+        } else if (newOrder.getPrice() == nextOrder.getPrice()) {
             // if time is less for new order
             firstNode = priotizeByTimeStampOrOrderedBy(newOrder, nextOrder, firstNode, newNode, SecondNode, nextNode);
 
             // if price is more for new order
-        }else{
-            firstNode= nextNode;
+        } else {
+            firstNode = nextNode;
             SecondNode = newNode;
         }
-        if(firstNode == newNode) {
+        if (firstNode == newNode) {
             return true;
         }
         return false;
 
     }
 
-    public static boolean maxHeapPrioritizer(BinomialHeapNode newNode, BinomialHeapNode nextNode){
+    public static boolean maxHeapPrioritizer(BinomialHeapNode newNode, BinomialHeapNode nextNode) {
 
-        Order newOrder = newNode.key, nextOrder= nextNode.key;
-        BinomialHeapNode firstNode=null, SecondNode=null;
+        Order newOrder = newNode.key, nextOrder = nextNode.key;
+        BinomialHeapNode firstNode = null, SecondNode = null;
 
         //case 1
-        if(newOrder.getPrice() > nextOrder.getPrice()){
-            firstNode= newNode;
+        if (newOrder.getPrice() > nextOrder.getPrice()) {
+            firstNode = newNode;
             SecondNode = nextNode;
-        }else if(newOrder.getPrice() == nextOrder.getPrice()){
+        } else if (newOrder.getPrice() == nextOrder.getPrice()) {
             firstNode = priotizeByTimeStampOrOrderedBy(newOrder, nextOrder, firstNode, newNode, SecondNode, nextNode);
             // if price is less for new order
-        }else{
-            firstNode= nextNode;
+        } else {
+            firstNode = nextNode;
             SecondNode = newNode;
         }
-        if(firstNode == newNode) {
+        if (firstNode == newNode) {
             return true;
         }
         return false;
@@ -54,46 +54,45 @@ public class Prioritizer {
 
     private static BinomialHeapNode priotizeByTimeStampOrOrderedBy(Order newOrder, Order nextOrder, BinomialHeapNode firstNode, BinomialHeapNode newNode, BinomialHeapNode secondNode, BinomialHeapNode nextNode) {
         // if time is less for new order
-        if(newOrder.getTimestamp().isBefore(nextOrder.getTimestamp())){
+        if (newOrder.getTimestamp() < nextOrder.getTimestamp()) {
             firstNode = newNode;
             secondNode = nextNode;
         }
 
         // if time is equal
-        else if(newOrder.getTimestamp().isEqual(nextOrder.getTimestamp())){
+        else if (newOrder.getTimestamp() == nextOrder.getTimestamp()) {
             // prioritize the order by source
-            if(newOrder.getOrderedBy().priorityRank < nextOrder.getOrderedBy().priorityRank){
+            if (newOrder.getOrderedBy().priorityRank < nextOrder.getOrderedBy().priorityRank) {
                 firstNode = newNode;
                 secondNode = nextNode;
             }
             // if both has same type of orderer
-            else if(newOrder.getOrderedBy().priorityRank == nextOrder.getOrderedBy().priorityRank){
+            else if (newOrder.getOrderedBy().priorityRank == nextOrder.getOrderedBy().priorityRank) {
                 // Randomly assign values
-                Random rand=new Random(100);
-                int one=0;
-                int two=0;
-                while(one == two){
-                    one=rand.nextInt(2);
-                    two=rand.nextInt(2);
+                Random rand = new Random(100);
+                int one = 0;
+                int two = 0;
+                while (one == two) {
+                    one = rand.nextInt(2);
+                    two = rand.nextInt(2);
                 }
-                if(one < two){
+                if (one < two) {
                     firstNode = newNode;
                     secondNode = nextNode;
-                }
-                else{
+                } else {
                     firstNode = nextNode;
                     secondNode = newNode;
                 }
 
             }
             // prioritze by order
-            else{
+            else {
                 firstNode = nextNode;
                 secondNode = newNode;
             }
         }
         // if time is after for new order
-        else{
+        else {
             firstNode = nextNode;
             secondNode = newNode;
         }
