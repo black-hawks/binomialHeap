@@ -2,7 +2,9 @@ package inputGeneration;
 
 import java.io.FileWriter;
 import java.io.IOException;
+import java.sql.Time;
 import java.sql.Timestamp;
+import java.util.Calendar;
 
 public class DataGenerator {
   final static String CLIENT_ORDER = "ClientOrder";
@@ -23,55 +25,111 @@ public class DataGenerator {
           INSIDER_ORDER
   };
 
-  final static int APPROX_RECORD_COUNT = 600000;
+  final static int APPROX_RECORD_COUNT = 6000000;
   final static int MIN_RECORD_COUNT_PER_SECOND = 5000;
   final static int MAX_RECORD_COUNT_PER_SECOND = 10000;
 
-  public static void main(String args[]) {
+  final static int TOTAL_SECONDS = 60 * 60; // one hour
+
+  public static void main(String args[]) throws IOException {
     String BuyerCsvFile = "BuyerDataFile.csv";
     String SellerCsvFile = "SellerDataFile.csv";
 
-    generateCsvFile(BuyerCsvFile);
-    generateCsvFile(SellerCsvFile);
+    generateRecordsForEverySecond(BuyerCsvFile);
+    generateRecordsForEverySecond(SellerCsvFile);
+
+
+//    generateRecordsForRandomSeconds(BuyerCsvFile);
+//    generateRecordsForRandomSeconds(SellerCsvFile);
+
+    ExternalMergeSort externalMergeSort = new ExternalMergeSort();
+    externalMergeSort.sort("BuyerDataFile.csv", "SortedBuyerDataFile.csv");
+    externalMergeSort.sort("SellerDataFile.csv", "SortedSellerDataFile.csv");
+
   }
 
-  public static void generateCsvFile(String csvFile) {
+  public static void generateRecordsForEverySecond(String csvFile) {
+    int numberOfRecordsGenerated = 0;
+    try(FileWriter writer = new FileWriter(csvFile)) {
+      Timestamp original = Timestamp.valueOf(String.format("2023-01-01 00:00:00"));
+
+      for (int sec = 0; sec < TOTAL_SECONDS; sec++) {
+        // generate 5000 to 10000 records for a particular second
+        numberOfRecordsGenerated += generateRecordsForAParticularSec(original, writer);
+
+        Calendar cal = Calendar.getInstance();
+        cal.setTimeInMillis(original.getTime());
+        cal.add(Calendar.SECOND, 1);
+        original = new Timestamp(cal.getTime().getTime());
+      }
+
+      writer.flush();
+      writer.close();
+      System.out.println("CSV file created successfully. " + numberOfRecordsGenerated + " records generated.");
+    } catch (IOException e) {
+      System.err.println("Error creating CSV file: " + e.getMessage());
+    }
+  }
+
+  public static void generateRecordsForRandomSeconds(String csvFile) {
 
     try(FileWriter writer = new FileWriter(csvFile)) {
       // code to generate the data randomly
-      for (int currentRecordCount = 0; currentRecordCount < APPROX_RECORD_COUNT; ) {
+      int numberOfRecordsGenerated = 0;
+      for ( ; numberOfRecordsGenerated < APPROX_RECORD_COUNT; ) {
+        // generate random timestamp
+        Timestamp start = Timestamp.valueOf(String.format("2023-01-01 00:00:00"));
+        Timestamp end = Timestamp.valueOf(String.format("2023-01-01 00:59:59"));
 
-        int randomSecond = (int)generateRandomNumber(0, 59);
-        int numberOfRecordsPerSecond = (int)generateRandomNumber(
-                MIN_RECORD_COUNT_PER_SECOND,
-                MAX_RECORD_COUNT_PER_SECOND
-        );
+        Timestamp time = randomTimeStampGenerator(start, end);
 
-        // generate records for this second
-        for (int j = 0; j < numberOfRecordsPerSecond; j++) {
-          double price = generateRandomPrice();
-          long quantity = generateRandomQuantity();
-          String sourceOfOrder = generateRandomOrderSource();
-          Timestamp randTimeStamp = randomTimeStampGenerator(randomSecond);
-
-          String[] data = {
-                  randTimeStamp.toString(),
-                  String.format("%.2f", price),
-                  Long.toString(quantity),
-                  sourceOfOrder
-          };
-          writer.write(String.join(",", data));
-          writer.write("\n");
-        }
-        currentRecordCount = currentRecordCount + numberOfRecordsPerSecond;
+        numberOfRecordsGenerated = numberOfRecordsGenerated + generateRecordsForAParticularSec(time, writer);
       }
 
+      writer.flush();
       writer.close();
-      System.out.println("CSV file created successfully.");
+      System.out.println("CSV file created successfully." + numberOfRecordsGenerated + " records generated.");
 
     } catch (IOException e) {
       System.err.println("Error creating CSV file: " + e.getMessage());
     }
+  }
+
+  public static int generateRecordsForAParticularSec(Timestamp time, FileWriter writer) {
+    int numberOfRecordsPerSecond = (int)generateRandomNumber(
+            MIN_RECORD_COUNT_PER_SECOND,
+            MAX_RECORD_COUNT_PER_SECOND
+    );
+
+    try {
+      // generate records for this second
+      for (int j = 0; j < numberOfRecordsPerSecond; j++) {
+        double price = generateRandomPrice();
+        long quantity = generateRandomQuantity();
+        String sourceOfOrder = generateRandomOrderSource();
+
+        // generate random timestamp for this particular second
+        Calendar cal = Calendar.getInstance();
+        cal.setTimeInMillis(time.getTime());
+        cal.add(Calendar.SECOND, 1);
+        Timestamp end = new Timestamp(cal.getTime().getTime());
+        Timestamp randTimeStamp = randomTimeStampGenerator(time, end);
+        String unixTime = Long.toString(randTimeStamp.getTime() / 1000);
+
+        String[] data = {
+                unixTime,
+                String.format("%.2f", price),
+                Long.toString(quantity),
+                sourceOfOrder
+        };
+        writer.write(String.join(",", data));
+        writer.write("\n");
+      }
+    } catch (IOException e) {
+      System.err.println("Error creating CSV file: " + e.getMessage());
+    }
+
+    return numberOfRecordsPerSecond;
   }
 
   public static String generateRandomOrderSource() {
@@ -93,9 +151,9 @@ public class DataGenerator {
     return (Math.random() * (max - min + 1)) + min;
   }
 
-  public static Timestamp randomTimeStampGenerator(int second) {
-    long offset = Timestamp.valueOf(String.format("2023-01-01 00:01:%02d", second)).getTime();
-    long end = Timestamp.valueOf(String.format("2023-01-01 00:01:%02d", (second + 1))).getTime();
+  public static Timestamp randomTimeStampGenerator(Timestamp startTime, Timestamp endTime) {
+    long offset = startTime.getTime();
+    long end = endTime.getTime();
 
     long diff = end - offset;
     Timestamp rand = new Timestamp(offset + (long) (Math.random() * diff));
