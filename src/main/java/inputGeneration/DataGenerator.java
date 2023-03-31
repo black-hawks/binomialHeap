@@ -35,25 +35,27 @@ public class DataGenerator {
     String BuyerCsvFile = "BuyerDataFile1.csv";
     String SellerCsvFile = "SellerDataFile1.csv";
     int ctr = 1;
+    int totalSeconds = 1000;
 
-    for (int totalSeconds = 1000; totalSeconds < TOTAL_SECONDS; ) {
+    do {
       generateRecordsForEverySecond(BuyerCsvFile, 1000);
       ExternalMergeSort externalMergeSort = new ExternalMergeSort();
       externalMergeSort.sort(BuyerCsvFile, "SortedBuyerDataFile" + ctr + ".csv");
 
       totalSeconds += 1000;
       BuyerCsvFile = "BuyerDataFile" + (++ctr) + ".csv";
-    }
+    } while(totalSeconds < TOTAL_SECONDS);
 
     ctr = 1;
-    for (int totalSeconds = 1000; totalSeconds < TOTAL_SECONDS; ) {
+    totalSeconds = 1000;
+    do {
       generateRecordsForEverySecond(SellerCsvFile, 1000);
       ExternalMergeSort externalMergeSort = new ExternalMergeSort();
       externalMergeSort.sort(SellerCsvFile, "SortedSellerDataFile" + ctr + ".csv");
 
       totalSeconds += 1000;
       SellerCsvFile = "SellerDataFile" + (++ctr) + ".csv";
-    }
+    } while(totalSeconds < TOTAL_SECONDS);
 
 //    generateRecordsForRandomSeconds(BuyerCsvFile);
 //    generateRecordsForRandomSeconds(SellerCsvFile);
@@ -152,7 +154,7 @@ public class DataGenerator {
   }
 
   public static double generateRandomPrice() {
-    return generateRandomNumber(1, 999999);
+    return generateRandomNumber(195, 197);
   }
 
   public static long generateRandomQuantity() {
