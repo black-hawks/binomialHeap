@@ -7,11 +7,11 @@ public class Order {
 
     double price;
     long quantity;
-    LocalDateTime timestamp;
+    long timestamp;
 
     Orderer orderedBy;
 
-    public Order(double price, long quantity, LocalDateTime timestamp, Orderer orderedBy) {
+    public Order(double price, long quantity, long timestamp, Orderer orderedBy) {
         this.price = price;
         this.quantity = quantity;
         this.timestamp = timestamp;
@@ -27,7 +27,7 @@ public class Order {
         return quantity;
     }
 
-    public LocalDateTime getTimestamp() {
+    public long getTimestamp() {
         return timestamp;
     }
 
@@ -43,6 +43,10 @@ public class Order {
                 ", timestamp=" + timestamp +
                 ", orderedBy=" + orderedBy +
                 '}';
+    }
+
+    public void setQuantity(long quantity){
+        this.quantity = quantity;
     }
 
 }
