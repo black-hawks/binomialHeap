@@ -4,27 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="75bea2ce-1b6d-4da5-ae26-1a62892f4d29" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/.classpath" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sbt.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/scala_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+    <list default="true" id="3e863386-7578-467c-b7bc-3573941556da" name="Changes" comment="Simulation Initial Commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.project" beforeDir="false" afterPath="$PROJECT_DIR$/.project" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/binomialHeap.iml" beforeDir="false" afterPath="$PROJECT_DIR$/binomialHeap.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/buyOrder.csv" beforeDir="false" afterPath="$PROJECT_DIR$/buyOrder.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sellOrder.csv" beforeDir="false" afterPath="$PROJECT_DIR$/sellOrder.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/binomialHeap/dataStructure/binomialHeap/BinomialHashMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/binomialHeap/dataStructure/binomialHeap/BinomialHashMap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/binomialHeap/dataStructure/binomialHeap/BinomialHeap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/binomialHeap/dataStructure/binomialHeap/BinomialHeap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/binomialHeap/dataStructure/binomialHeap/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/binomialHeap/dataStructure/binomialHeap/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/binomialHeap/market/ClearingHouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/binomialHeap/market/ClearingHouse.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,14 +34,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "settings.editor.selected.configurable": "preferences.editor"
   }
-}</component>
-  <component name="RunManager">
+}]]></component>
+  <component name="RunManager" selected="JUnit.BinomialHeapTest.insert">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="binomialHeap" />
@@ -65,8 +50,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="BinomialHeapTest.insert" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="binomialHeap" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="binomialHeap.dataStructure.binomialHeap.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="binomialHeap.dataStructure.binomialHeap" />
+      <option name="MAIN_CLASS_NAME" value="binomialHeap.dataStructure.binomialHeap.BinomialHeapTest" />
+      <option name="METHOD_NAME" value="insert" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.BinomialHeapTest.insert" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -92,5 +94,38 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/binomialHeap/market/ClearingHouse.java</url>
+          <line>34</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/binomialHeap/market/ClearingHouse.java</url>
+          <line>43</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/binomialHeap/market/ClearingHouse.java</url>
+          <line>55</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/binomialHeap/dataStructure/binomialHeap/BinomialHashMap.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="binomialHeap.dataStructure.binomialHeap.BinomialHeapNode" memberName="sibling" />
+        <PinnedItemInfo parentTag="binomialHeap.dataStructure.binomialHeap.BinomialHeapNode" memberName="child" />
+        <PinnedItemInfo parentTag="binomialHeap.market.ClearingHouse" memberName="sellReader" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
 </project>
