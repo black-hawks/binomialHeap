@@ -1,4 +1,4 @@
-package binomialHeap.dataStructure.binomialHeap;
+package stockExchange.market;
 
 public enum Orderer {
 
@@ -12,8 +12,8 @@ public enum Orderer {
 
     public final int priorityRank;
 
-    private Orderer(int priorityRank){
-        this.priorityRank =priorityRank;
+    Orderer(int priorityRank) {
+        this.priorityRank = priorityRank;
     }
 
 
