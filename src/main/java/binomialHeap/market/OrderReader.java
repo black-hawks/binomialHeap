@@ -45,7 +45,7 @@ public class OrderReader extends CSVReader {
             return -1;
         }
         this.br.reset();
-        return Long.parseLong(line[2]);
+        return Long.parseLong(line[0]);
     }
 
     /**
@@ -61,9 +61,9 @@ public class OrderReader extends CSVReader {
             return null;
         }
         return new Order(
-                Double.parseDouble(line[0]),
-                Long.parseLong(line[1]),
+                Double.parseDouble(line[1]),
                 Long.parseLong(line[2]),
+                Long.parseLong(line[0]),
                 Orderer.valueOf(line[3])
         );
     }

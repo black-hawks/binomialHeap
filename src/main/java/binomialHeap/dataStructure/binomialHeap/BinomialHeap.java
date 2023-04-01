@@ -43,7 +43,7 @@ public abstract class BinomialHeap {
                 size = 1;
             } else {
                 unionNodes(temp);
-                size++;
+//                size++;
             }
         }
     }
@@ -51,6 +51,7 @@ public abstract class BinomialHeap {
     // Method 4
     // To unite two binomial heaps
     public void merge(BinomialHeapNode newNode) {
+        int newNodeSize = newNode.getSize();
         BinomialHeapNode temp1 = Nodes, temp2 = newNode;
 
         while ((temp1 != null) && (temp2 != null)) {
@@ -99,16 +100,19 @@ public abstract class BinomialHeap {
             temp1.sibling = temp2;
         } else {
         }
+        size += newNodeSize;
     }
 
     /**
      * To Join New Node with an Existing Heap
+     *
      * @param newNode
      */
     protected abstract void unionNodes(BinomialHeapNode newNode);
 
 
-    /** To extract the node with the HighestPriority
+    /**
+     * To extract the node with the HighestPriority
      *
      * @return
      */
@@ -177,6 +181,13 @@ public abstract class BinomialHeap {
         return Nodes;
     }
 
-    
+    public Order peekHighestOrder() {
+        if (Nodes == null)
+            return null;
+        BinomialHeapNode maxNode = Nodes.findMaxNode();
+        return maxNode.getKey();
+    }
+
+
 }
 
