@@ -51,12 +51,19 @@ class BinomialHashMapTest {
         binomialHashMap1.insert(order1);
         BinomialHashMap binomialHashMap2 = new BinomialHashMap();
         Order order2 = new Order(100, 10000, 1672531270, Orderer.InsiderOrder);
+        Order order3 = new Order(101, 70000, 1672531272, Orderer.InsiderOrder);
         binomialHashMap2.insert(order2);
+        binomialHashMap2.insert(order3);
         binomialHashMap1.merge(binomialHashMap2);
-        BuyBinomialMaxHeap mergedSellOrders = binomialHashMap1.getBinomialHashMap().get(100.0);
-        Assertions.assertEquals(2, mergedSellOrders.getSize());
-        Assertions.assertEquals(order2, mergedSellOrders.extractHighestPriorityElement().getKey());
-        Assertions.assertEquals(order1, mergedSellOrders.extractHighestPriorityElement().getKey());
+        BuyBinomialMaxHeap mergedSellOrders1 = binomialHashMap1.getBinomialHashMap().get(100.0);
+        Assertions.assertEquals(2, mergedSellOrders1.getSize());
+        Assertions.assertEquals(order2, mergedSellOrders1.extractHighestPriorityElement().getKey());
+        Assertions.assertEquals(order1, mergedSellOrders1.extractHighestPriorityElement().getKey());
+
+        BuyBinomialMaxHeap mergedSellOrders2 = binomialHashMap1.getBinomialHashMap().get(101.0);
+        Assertions.assertEquals(1, mergedSellOrders2.getSize());
+        Assertions.assertEquals(order3, mergedSellOrders2.extractHighestPriorityElement().getKey());
+//        Assertions.assertEquals(order3, mergedSellOrders.extractHighestPriorityElement().getKey());
     }
 
 }

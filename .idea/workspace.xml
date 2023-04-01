@@ -4,15 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e863386-7578-467c-b7bc-3573941556da" name="Changes" comment="Simulation Initial Commit">
+    <list default="true" id="3e863386-7578-467c-b7bc-3573941556da" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/binomialHeap/dataStructure/binomialHeap/BinomialHeap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/binomialHeap/dataStructure/binomialHeap/BinomialHeap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/binomialHeap/dataStructure/binomialHeap/BinomialHeapNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/binomialHeap/dataStructure/binomialHeap/BinomialHeapNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/binomialHeap/dataStructure/binomialHeap/BinomialHashMapTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/binomialHeap/dataStructure/binomialHeap/BinomialHashMapTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageOptionsProvider">
+    <option name="myAddOrReplace" value="0" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -166,7 +168,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680342437562</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Fix binomialHashMap issues">
+      <created>1680344239021</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1680344239021</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -183,7 +192,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Test commit" />
     <MESSAGE value="update BinomialHashMap.fetchOrder" />
-    <option name="LAST_COMMIT_MESSAGE" value="update BinomialHashMap.fetchOrder" />
+    <MESSAGE value="Fix binomialHashMap issues" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix binomialHashMap issues" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -233,6 +243,16 @@
           <line>25</line>
           <option name="timeStamp" value="25" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/binomialHeap/dataStructure/binomialHeap/BinomialHeap.java</url>
+          <line>44</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/binomialHeap/dataStructure/binomialHeap/BuyBinomialMaxHeap.java</url>
+          <line>5</line>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <pin-to-top-manager>
@@ -244,8 +264,11 @@
     </pin-to-top-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/binomialHeap$BinomialHashMapTest_testLessBuyerQuantity.ic" NAME="BinomialHashMapTest.testLessBuyerQuantity Coverage Results" MODIFIED="1680344171412" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>binomialHeap.dataStructure.binomialHeap.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/binomialHeap$Main.ic" NAME="Main Coverage Results" MODIFIED="1680335776044" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/binomialHeap$BinomialHashMapTest.ic" NAME="BinomialHashMapTest Coverage Results" MODIFIED="1680336914178" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/binomialHeap$BinomialHashMapTest.ic" NAME="BinomialHashMapTest Coverage Results" MODIFIED="1680344714390" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>binomialHeap.dataStructure.binomialHeap.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/binomialHeap$BinomialHeapTest_insert.ic" NAME="BinomialHeapTest.insert Coverage Results" MODIFIED="1680273814371" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
