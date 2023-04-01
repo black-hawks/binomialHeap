@@ -1,4 +1,4 @@
-package inputGeneration;
+package stockExchange.inputGeneration;
 
 import java.io.*;
 import java.util.ArrayList;
