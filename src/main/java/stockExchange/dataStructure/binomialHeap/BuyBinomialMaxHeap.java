@@ -1,6 +1,18 @@
 package stockExchange.dataStructure.binomialHeap;
 
+/**
+ * BuyBinomialMaxHeap is a subclass of BinomialHeap that implements the Buy Max Heap data structure.
+ * It overrides the unionNodes method to merge a new node into the heap and ensures that the
+ * max heap property is maintained. It also provides the extractHighestPriorityElement method to
+ * extract the node with the highest priority from the heap and restructures the heap after the extraction.
+ */
 public class BuyBinomialMaxHeap extends BinomialHeap {
+
+    /**
+     * This method merges the given new node into the heap and ensures that the max heap property is maintained.
+     *
+     * @param newNode the new node to be merged into the heap
+     */
     @Override
     protected void unionNodes(BinomialHeapNode newNode) {
         merge(newNode);
@@ -40,6 +52,12 @@ public class BuyBinomialMaxHeap extends BinomialHeap {
         }
     }
 
+    /**
+     * This method extracts the node with the highest priority from the heap and restructures the heap
+     * to maintain the max heap property.
+     *
+     * @return the node with the highest priority in the heap
+     */
     public BinomialHeapNode extractHighestPriorityElement() {
         if (Nodes == null)
             return null;

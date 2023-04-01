@@ -1,11 +1,23 @@
 package stockExchange.dataStructure.binomialHeap;
 
+/**
+ * The SellBinomialMinHeap class extends BinomialHeap and represents a min-heap data structure
+ * that is used to implement a sell priority queue in a stock exchange system.
+ */
 public class SellBinomialMinHeap extends  BinomialHeap{
 
+    /**
+     * Creates a new instance of the SellBinomialMinHeap class.
+     */
     public SellBinomialMinHeap(){
         super();
     }
 
+    /**
+     * Overrides the unionNodes method from the parent class and merges a new node with the existing heap.
+     *
+     * @param newNode the node to be merged with the heap
+     */
     @Override
     protected void unionNodes(BinomialHeapNode newNode) {
         merge(newNode);
@@ -45,6 +57,11 @@ public class SellBinomialMinHeap extends  BinomialHeap{
         }
     }
 
+    /**
+     * Extracts the highest priority element from the heap and restructures the heap accordingly.
+     *
+     * @return the node with the highest priority in the heap
+     */
     public BinomialHeapNode extractHighestPriorityElement() {
         if (Nodes == null)
             return null;
@@ -53,7 +70,4 @@ public class SellBinomialMinHeap extends  BinomialHeap{
 
         return minNode;
     }
-
-
-
 }
