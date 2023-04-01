@@ -13,6 +13,12 @@ public class Prioritizer {
     /**
      * Determines the priority order of two nodes in a min-heap.
      *
+     * Priority Order is determined in following order
+     * First. Order with the Lowest Price get the highest Priority
+     * Second. If two order has same price then Order which was placed earlier get the highest Priority
+     * Third. If Price and Timestamp of orders are same then, the Priority is determined by who was the Orderer(Enum)
+     * If all the above details matches then priority is determined in random order.
+     *
      * @param newNode the new node to compare
      * @param nextNode the next node to compare
      * @return true if newNode has higher priority than nextNode; false otherwise
@@ -39,6 +45,12 @@ public class Prioritizer {
 
     /**
      * Determines the priority order of two nodes in a max-heap.
+     *
+     *  Priority Order is determined in following order
+     *  First. Order with the Highest Price get the highest Priority
+     *  Second. If two order has same price then Order which was placed earlier get the highest Priority
+     *  Third. If Price and Timestamp of orders are same then, the Priority is determined by who was the Orderer(Enum)
+     *  If all the above details matches then priority is determined in random order.
      *
      * @param newNode the new node to compare
      * @param nextNode the next node to compare

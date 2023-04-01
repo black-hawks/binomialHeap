@@ -109,39 +109,7 @@ public class BinomialHeapNode {
         }
         return max;
     }
-
-    /**
-     * Returns the node in the subtree rooted at this node with the specified key value.
-     *
-     * @param price the key value to search for.
-     * @return the node in the subtree rooted at this node with the specified key value,
-     * or null if no such node exists.
-     */
-    public BinomialHeapNode findANodeWithKey(float price) {
-
-        BinomialHeapNode temp = this, node = null;
-
-        while (temp != null) {
-            if (temp.key.getPrice() == price) {
-                node = temp;
-                break;
-            }
-
-            if (temp.child == null)
-                temp = temp.sibling;
-
-            else {
-                node = temp.child.findANodeWithKey(price);
-                if (node == null)
-                    temp = temp.sibling;
-                else
-                    break;
-            }
-        }
-
-        return node;
-    }
-
+    
     /**
      * Returns the size of the binomial heap rooted at this node, including this node.
      * The size of the heap is defined as the total number of nodes in the heap.
