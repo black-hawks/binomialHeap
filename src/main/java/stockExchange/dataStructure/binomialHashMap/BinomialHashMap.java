@@ -7,9 +7,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
-
- The BinomialHashMap class represents a data structure that implements a map of SellBinomialMinHeap objects, with
- a Double key representing the price associated with each heap.
+ * The BinomialHashMap class represents a data structure that implements a map of SellBinomialMinHeap objects, with
+ * a Double key representing the price associated with each heap.
  */
 public class BinomialHashMap {
     /**
