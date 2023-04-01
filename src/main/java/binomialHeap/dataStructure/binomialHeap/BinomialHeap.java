@@ -43,7 +43,7 @@ public abstract class BinomialHeap {
                 size = 1;
             } else {
                 unionNodes(temp);
-                size++;
+//                size++;
             }
         }
     }
@@ -99,16 +99,19 @@ public abstract class BinomialHeap {
             temp1.sibling = temp2;
         } else {
         }
+        size += newNode.getSize();
     }
 
     /**
      * To Join New Node with an Existing Heap
+     *
      * @param newNode
      */
     protected abstract void unionNodes(BinomialHeapNode newNode);
 
 
-    /** To extract the node with the HighestPriority
+    /**
+     * To extract the node with the HighestPriority
      *
      * @return
      */
@@ -177,6 +180,6 @@ public abstract class BinomialHeap {
         return Nodes;
     }
 
-    
+
 }
 

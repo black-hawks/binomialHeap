@@ -55,21 +55,15 @@ public class BinomialHeapNode {
     }
 
     public BinomialHeapNode findMaxNode() {
-
-        // this keyword refers to current instance itself
-        BinomialHeapNode x = this, y = this;
-        double max = x.key.getPrice();
-
+        BinomialHeapNode max = this;
+        BinomialHeapNode x = this.sibling;
         while (x != null) {
-            if (x.key.getPrice() > max) {
-                y = x;
-                max = x.key.getPrice();
+            if (Prioritizer.maxHeapPrioritizer(x, max)) {
+                max = x;
             }
-
             x = x.sibling;
         }
-
-        return y;
+        return max;
     }
 
     // Method 3
