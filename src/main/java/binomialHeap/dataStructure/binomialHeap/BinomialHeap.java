@@ -51,6 +51,7 @@ public abstract class BinomialHeap {
     // Method 4
     // To unite two binomial heaps
     public void merge(BinomialHeapNode newNode) {
+        int newNodeSize = newNode.getSize();
         BinomialHeapNode temp1 = Nodes, temp2 = newNode;
 
         while ((temp1 != null) && (temp2 != null)) {
@@ -99,7 +100,7 @@ public abstract class BinomialHeap {
             temp1.sibling = temp2;
         } else {
         }
-        size += newNode.getSize();
+        size += newNodeSize;
     }
 
     /**

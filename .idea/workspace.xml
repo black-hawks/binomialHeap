@@ -4,9 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e863386-7578-467c-b7bc-3573941556da" name="Changes" comment="">
+    <list default="true" id="3e863386-7578-467c-b7bc-3573941556da" name="Changes" comment="Update BinomialHashMapTest cases">
+      <change afterPath="$PROJECT_DIR$/src/test/java/binomialHeap/dataStructure/binomialHeap/BinomialHeapNodeTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/binomialHeap/dataStructure/binomialHeap/BinomialHashMapTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/binomialHeap/dataStructure/binomialHeap/BinomialHashMapTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buyOrder.csv" beforeDir="false" afterPath="$PROJECT_DIR$/buyOrder.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sellOrder.csv" beforeDir="false" afterPath="$PROJECT_DIR$/sellOrder.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/binomialHeap/dataStructure/binomialHeap/BinomialHeap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/binomialHeap/dataStructure/binomialHeap/BinomialHeap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/binomialHeap/market/ClearingHouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/binomialHeap/market/ClearingHouse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/binomialHeap/market/OrderReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/binomialHeap/market/OrderReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/binomialHeap/dataStructure/binomialHeap/BinomialHeapTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/binomialHeap/dataStructure/binomialHeap/BinomialHeapTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,25 +70,10 @@
       <recent name="binomialHeap.dataStructure.binomialHeap" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.BinomialHashMapTest">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="binomialHeap" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BinomialHashMapTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="binomialHeap" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="binomialHeap.dataStructure.binomialHeap.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="binomialHeap.dataStructure.binomialHeap" />
-      <option name="MAIN_CLASS_NAME" value="binomialHeap.dataStructure.binomialHeap.BinomialHashMapTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -103,7 +94,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BinomialHashMapTest.testLessBuyerQuantity" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BinomialHeapNodeTest.testSize" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="binomialHeap" />
       <extension name="coverage">
         <pattern>
@@ -112,14 +103,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="binomialHeap.dataStructure.binomialHeap" />
-      <option name="MAIN_CLASS_NAME" value="binomialHeap.dataStructure.binomialHeap.BinomialHashMapTest" />
-      <option name="METHOD_NAME" value="testLessBuyerQuantity" />
+      <option name="MAIN_CLASS_NAME" value="binomialHeap.dataStructure.binomialHeap.BinomialHeapNodeTest" />
+      <option name="METHOD_NAME" value="testSize" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BinomialHeapTest.insert" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BinomialHeapTest.getSize" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="binomialHeap" />
       <extension name="coverage">
         <pattern>
@@ -129,19 +120,33 @@
       </extension>
       <option name="PACKAGE_NAME" value="binomialHeap.dataStructure.binomialHeap" />
       <option name="MAIN_CLASS_NAME" value="binomialHeap.dataStructure.binomialHeap.BinomialHeapTest" />
-      <option name="METHOD_NAME" value="insert" />
+      <option name="METHOD_NAME" value="getSize" />
       <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="binomialHeap.dataStructure.binomialHeap in binomialHeap" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="binomialHeap" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="binomialHeap.dataStructure.binomialHeap.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="binomialHeap.dataStructure.binomialHeap" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.BinomialHashMapTest" />
-        <item itemvalue="JUnit.BinomialHashMapTest.testLessBuyerQuantity" />
-        <item itemvalue="JUnit.BinomialHashMapTest.mergeBinomialHashMap" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.BinomialHeapTest.insert" />
+        <item itemvalue="JUnit.BinomialHeapTest.getSize" />
+        <item itemvalue="JUnit.binomialHeap.dataStructure.binomialHeap in binomialHeap" />
+        <item itemvalue="JUnit.BinomialHeapNodeTest.testSize" />
+        <item itemvalue="JUnit.BinomialHashMapTest.mergeBinomialHashMap" />
       </list>
     </recent_temporary>
   </component>
@@ -175,7 +180,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680344239021</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Update BinomialHashMapTest cases">
+      <created>1680346887480</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1680346887480</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -193,14 +205,15 @@
     <MESSAGE value="Test commit" />
     <MESSAGE value="update BinomialHashMap.fetchOrder" />
     <MESSAGE value="Fix binomialHashMap issues" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix binomialHashMap issues" />
+    <MESSAGE value="Update BinomialHashMapTest cases" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update BinomialHashMapTest cases" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/binomialHeap/market/ClearingHouse.java</url>
-          <line>34</line>
+          <line>32</line>
           <option name="timeStamp" value="16" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -210,23 +223,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/binomialHeap/market/ClearingHouse.java</url>
-          <line>55</line>
+          <line>52</line>
           <option name="timeStamp" value="18" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/binomialHeap/dataStructure/binomialHeap/BinomialHashMap.java</url>
-          <line>25</line>
-          <option name="timeStamp" value="19" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/binomialHeap/dataStructure/binomialHeap/BinomialHashMapTest.java</url>
           <line>48</line>
           <option name="timeStamp" value="20" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/binomialHeap/dataStructure/binomialHeap/BinomialHashMap.java</url>
-          <line>54</line>
-          <option name="timeStamp" value="21" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/binomialHeap/dataStructure/binomialHeap/Prioritizer.java</url>
@@ -244,14 +247,24 @@
           <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/binomialHeap/dataStructure/binomialHeap/BinomialHeap.java</url>
-          <line>44</line>
-          <option name="timeStamp" value="26" />
+          <url>file://$PROJECT_DIR$/src/test/java/binomialHeap/dataStructure/binomialHeap/BinomialHeapTest.java</url>
+          <line>19</line>
+          <option name="timeStamp" value="29" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/binomialHeap/dataStructure/binomialHeap/BuyBinomialMaxHeap.java</url>
-          <line>5</line>
-          <option name="timeStamp" value="27" />
+          <url>file://$PROJECT_DIR$/src/main/java/binomialHeap/market/ClearingHouse.java</url>
+          <line>75</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/binomialHeap/market/ClearingHouse.java</url>
+          <line>48</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/binomialHeap/dataStructure/binomialHeap/BinomialHeap.java</url>
+          <line>53</line>
+          <option name="timeStamp" value="32" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -259,6 +272,7 @@
       <pinned-members>
         <PinnedItemInfo parentTag="binomialHeap.dataStructure.binomialHeap.BinomialHeapNode" memberName="sibling" />
         <PinnedItemInfo parentTag="binomialHeap.dataStructure.binomialHeap.BinomialHeapNode" memberName="child" />
+        <PinnedItemInfo parentTag="binomialHeap.market.ClearingHouse" memberName="buyOrders" />
         <PinnedItemInfo parentTag="binomialHeap.market.ClearingHouse" memberName="sellReader" />
       </pinned-members>
     </pin-to-top-manager>
@@ -268,7 +282,7 @@
       <FILTER>binomialHeap.dataStructure.binomialHeap.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/binomialHeap$Main.ic" NAME="Main Coverage Results" MODIFIED="1680335776044" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/binomialHeap$BinomialHashMapTest.ic" NAME="BinomialHashMapTest Coverage Results" MODIFIED="1680344714390" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/binomialHeap$BinomialHashMapTest.ic" NAME="BinomialHashMapTest Coverage Results" MODIFIED="1680346858302" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>binomialHeap.dataStructure.binomialHeap.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/binomialHeap$BinomialHeapTest_insert.ic" NAME="BinomialHeapTest.insert Coverage Results" MODIFIED="1680273814371" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
