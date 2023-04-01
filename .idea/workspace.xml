@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e863386-7578-467c-b7bc-3573941556da" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/inputGeneration/DataGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stockExchange/inputGeneration/DataGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/inputGeneration/ExternalMergeSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stockExchange/inputGeneration/ExternalMergeSort.java" afterDir="false" />
-    </list>
+    <list default="true" id="3e863386-7578-467c-b7bc-3573941556da" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -233,7 +230,21 @@
       <option name="project" value="LOCAL" />
       <updated>1680372818818</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Update directory and package">
+      <created>1680373012871</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1680373012871</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Add log entries">
+      <created>1680378749103</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1680378749103</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -258,70 +269,12 @@
     <MESSAGE value="update data set" />
     <MESSAGE value="remove headers" />
     <MESSAGE value="Update directory and package" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update directory and package" />
+    <MESSAGE value="Add log entries" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add log entries" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/stockExchange/market/ClearingHouse.java</url>
-          <line>59</line>
-          <option name="timeStamp" value="16" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/stockExchange/market/ClearingHouse.java</url>
-          <line>70</line>
-          <option name="timeStamp" value="17" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/stockExchange/market/ClearingHouse.java</url>
-          <line>79</line>
-          <option name="timeStamp" value="18" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/stockExchange/dataStructure/binomialHeap/BinomialHashMapTest.java</url>
-          <line>48</line>
-          <option name="timeStamp" value="20" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/stockExchange/dataStructure/binomialHeap/Prioritizer.java</url>
-          <line>8</line>
-          <option name="timeStamp" value="23" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/stockExchange/dataStructure/binomialHeap/BinomialHashMapTest.java</url>
-          <line>20</line>
-          <option name="timeStamp" value="24" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/stockExchange/dataStructure/binomialHeap/BinomialHashMapTest.java</url>
-          <line>25</line>
-          <option name="timeStamp" value="25" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/stockExchange/dataStructure/binomialHeap/BinomialHeapTest.java</url>
-          <line>19</line>
-          <option name="timeStamp" value="29" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/stockExchange/market/ClearingHouse.java</url>
-          <line>102</line>
-          <option name="timeStamp" value="30" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/stockExchange/market/ClearingHouse.java</url>
-          <line>75</line>
-          <option name="timeStamp" value="31" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/stockExchange/dataStructure/binomialHeap/BinomialHeap.java</url>
-          <line>53</line>
-          <option name="timeStamp" value="32" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="binomialHeap.dataStructure.binomialHeap.BinomialHeapNode" memberName="sibling" />

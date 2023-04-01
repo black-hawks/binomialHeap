@@ -8,6 +8,8 @@ import java.util.Map;
 
 public class BinomialHashMap {
     private final HashMap<Double, SellBinomialMinHeap> binomialHashMap;
+    public int ordersCompleted = 0;
+    public int partialCompleted = 0;
 
     public BinomialHashMap() {
         this.binomialHashMap = new HashMap<>();
@@ -38,14 +40,17 @@ public class BinomialHashMap {
         if (order.getQuantity() == quantity) {
             quantityFulfilled = quantity;
             binomialHeap.extractHighestPriorityElement();
+            ordersCompleted++;
         } else if (order.getQuantity() < quantity) {
 //            quantity = quantity - order.quantity;
             quantityFulfilled = order.getQuantity();
             binomialHeap.extractHighestPriorityElement();
+            ordersCompleted++;
             quantityFulfilled += fetchOrder(price, quantity - quantityFulfilled);
         } else {
             order.setQuantity(order.getQuantity() - quantity);
             quantityFulfilled = quantity;// this means that we have processed the quantity of the buy shares
+            partialCompleted++;
         }
         if (binomialHeap.isEmpty()) {
             binomialHashMap.remove(price);
