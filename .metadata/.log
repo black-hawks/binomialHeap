@@ -10,7 +10,7 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.e
 !MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
 
 !ENTRY ch.qos.logback.classic 1 0 2023-03-27 15:07:13.288
-!MESSAGE Logback config file: D:\UCD\ADS\a3\binomialHeap\.metadata\.plugins\org.eclipse.m2e.logback\logback.2.1.0.20221015-0744.xml
+!MESSAGE Logback config file: D:\UCD\ADS\a3\stockExchange\.metadata\.plugins\org.eclipse.m2e.logback\logback.2.1.0.20221015-0744.xml
 
 !ENTRY org.eclipse.jface 2 0 2023-03-27 15:07:22.965
 !MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.

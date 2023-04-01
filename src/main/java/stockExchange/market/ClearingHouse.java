@@ -1,13 +1,10 @@
-package binomialHeap.market;
+package stockExchange.market;
 
-import binomialHeap.dataStructure.binomialHeap.BinomialHashMap;
-import binomialHeap.dataStructure.binomialHeap.BuyBinomialMaxHeap;
-import binomialHeap.dataStructure.binomialHeap.Order;
+import stockExchange.dataStructure.binomialHashMap.BinomialHashMap;
+import stockExchange.dataStructure.binomialHeap.BuyBinomialMaxHeap;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.text.ParseException;
-import java.time.Duration;
 
 public class ClearingHouse {
     private final OrderReader buyReader;
@@ -16,19 +13,11 @@ public class ClearingHouse {
     private BuyBinomialMaxHeap pendingBuyOrders;
 
     public ClearingHouse() throws FileNotFoundException {
-        this.buyReader = new OrderReader("SortedBuyerDataFile1.csv", Duration.ofSeconds(1));
-        this.sellReader = new OrderReader("SortedSellerDataFile1.csv", Duration.ofSeconds(1));
+        this.buyReader = new OrderReader("SortedBuyerDataFile1.csv");
+        this.sellReader = new OrderReader("SortedSellerDataFile1.csv");
     }
 
-    public void initMarket() throws IOException, ParseException {
-        while (!isEOD()) {
-            BuyBinomialMaxHeap buyOrders = fetchBuyOrders();
-            BinomialHashMap sellOrders = fetchSellOrders();
-            performTransactions(buyOrders, sellOrders);
-        }
-    }
-
-    private BuyBinomialMaxHeap fetchBuyOrders() throws IOException, ParseException {
+    public BuyBinomialMaxHeap fetchBuyOrders() throws IOException {
         long startTime = buyReader.getTime();
         BuyBinomialMaxHeap buyOrders = new BuyBinomialMaxHeap();
         while (buyReader.getTime() == startTime) {
@@ -41,7 +30,7 @@ public class ClearingHouse {
         return buyOrders;
     }
 
-    private BinomialHashMap fetchSellOrders() throws IOException, ParseException {
+    public BinomialHashMap fetchSellOrders() throws IOException {
         long startTime = sellReader.getTime();
         BinomialHashMap sellOrders = new BinomialHashMap();
         while (sellReader.getTime() == startTime) {
@@ -54,7 +43,7 @@ public class ClearingHouse {
         return sellOrders;
     }
 
-    private void performTransactions(BuyBinomialMaxHeap buyOrders, BinomialHashMap sellOrders) {
+    public void performTransactions(BuyBinomialMaxHeap buyOrders, BinomialHashMap sellOrders) {
         pendingBuyOrders = new BuyBinomialMaxHeap();
         pendingSellOrders = new BinomialHashMap();
         while (!buyOrders.isEmpty()) {
@@ -78,7 +67,7 @@ public class ClearingHouse {
         pendingSellOrders = sellOrders;
     }
 
-    private boolean isEOD() throws IOException, ParseException {
+    public boolean isEOD() throws IOException {
         return buyReader.getTime() == -1 || sellReader.getTime() == -1;
     }
 }

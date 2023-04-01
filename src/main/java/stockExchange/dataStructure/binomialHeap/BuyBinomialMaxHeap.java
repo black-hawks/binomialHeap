@@ -1,11 +1,6 @@
-package binomialHeap.dataStructure.binomialHeap;
+package stockExchange.dataStructure.binomialHeap;
 
-public class SellBinomialMinHeap extends  BinomialHeap{
-
-    public SellBinomialMinHeap(){
-        super();
-    }
-
+public class BuyBinomialMaxHeap extends BinomialHeap {
     @Override
     protected void unionNodes(BinomialHeapNode newNode) {
         merge(newNode);
@@ -22,7 +17,7 @@ public class SellBinomialMinHeap extends  BinomialHeap{
                 prevTemp = temp;
                 temp = nextTemp;
             } else {
-                if (Prioritizer.minHeapPrioritizer(temp, nextTemp)) {
+                if (Prioritizer.maxHeapPrioritizer(temp, nextTemp)) {
                     temp.sibling = nextTemp.sibling;
                     nextTemp.parent = temp;
                     nextTemp.sibling = temp.child;
@@ -48,12 +43,8 @@ public class SellBinomialMinHeap extends  BinomialHeap{
     public BinomialHeapNode extractHighestPriorityElement() {
         if (Nodes == null)
             return null;
-        BinomialHeapNode minNode = Nodes.findMinNode();
-        reStructureHeapAfterExtract(minNode);
-
-        return minNode;
+        BinomialHeapNode maxNode = Nodes.findMaxNode();
+        reStructureHeapAfterExtract(maxNode);
+        return maxNode;
     }
-
-
-
 }
