@@ -1,4 +1,6 @@
-package binomialHeap.dataStructure.binomialHeap;
+package stockExchange.dataStructure.binomialHeap;
+
+import stockExchange.market.Order;
 
 public class BinomialHeapNode {
 

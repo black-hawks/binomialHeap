@@ -4,8 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e863386-7578-467c-b7bc-3573941556da" name="Changes" comment="">
+    <list default="true" id="3e863386-7578-467c-b7bc-3573941556da" name="Changes" comment="Update directory and package">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.log" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/binomialHeap/dataStructure/binomialHeap/BinomialHashMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stockExchange/dataStructure/binomialHashMap/BinomialHashMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/binomialHeap/dataStructure/binomialHeap/BinomialHeap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stockExchange/dataStructure/binomialHeap/BinomialHeap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/binomialHeap/dataStructure/binomialHeap/BinomialHeapNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stockExchange/dataStructure/binomialHeap/BinomialHeapNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/binomialHeap/dataStructure/binomialHeap/BuyBinomialMaxHeap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stockExchange/dataStructure/binomialHeap/BuyBinomialMaxHeap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/binomialHeap/dataStructure/binomialHeap/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stockExchange/market/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/binomialHeap/dataStructure/binomialHeap/Orderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stockExchange/market/Orderer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/binomialHeap/dataStructure/binomialHeap/Prioritizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stockExchange/dataStructure/binomialHeap/Prioritizer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/binomialHeap/dataStructure/binomialHeap/SellBinomialMinHeap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stockExchange/dataStructure/binomialHeap/SellBinomialMinHeap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/binomialHeap/market/ClearingHouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stockExchange/market/ClearingHouse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/binomialHeap/market/OrderReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stockExchange/market/OrderReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/binomialHeap/util/CSVReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stockExchange/util/CSVReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/binomialHeap/dataStructure/binomialHeap/BinomialHashMapTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/binomialHeap/dataStructure/binomialHeap/BinomialHeapNodeTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/binomialHeap/dataStructure/binomialHeap/BinomialHeapTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,12 +95,12 @@
       <module name="binomialHeap" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="binomialHeap.dataStructure.binomialHeap.BuyBinomialMaxHeap" />
+          <option name="PATTERN" value="stockExchange.dataStructure.binomialHeap.BuyBinomialMaxHeap" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="binomialHeap.dataStructure.binomialHeap" />
-      <option name="MAIN_CLASS_NAME" value="binomialHeap.dataStructure.binomialHeap.BinomialHashMapTest" />
+      <option name="MAIN_CLASS_NAME" value="stockExchange.dataStructure.binomialHeap.BinomialHashMapTest" />
       <option name="METHOD_NAME" value="mergeBinomialHashMap" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -94,12 +111,12 @@
       <module name="binomialHeap" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="binomialHeap.dataStructure.binomialHeap.BuyBinomialMaxHeap" />
+          <option name="PATTERN" value="stockExchange.dataStructure.binomialHeap.BuyBinomialMaxHeap" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="binomialHeap.dataStructure.binomialHeap" />
-      <option name="MAIN_CLASS_NAME" value="binomialHeap.dataStructure.binomialHeap.BinomialHeapNodeTest" />
+      <option name="MAIN_CLASS_NAME" value="stockExchange.dataStructure.binomialHeap.BinomialHeapNodeTest" />
       <option name="METHOD_NAME" value="testSize" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -110,27 +127,27 @@
       <module name="binomialHeap" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="binomialHeap.dataStructure.binomialHeap.BuyBinomialMaxHeap" />
+          <option name="PATTERN" value="stockExchange.dataStructure.binomialHeap.BuyBinomialMaxHeap" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="binomialHeap.dataStructure.binomialHeap" />
-      <option name="MAIN_CLASS_NAME" value="binomialHeap.dataStructure.binomialHeap.BinomialHeapTest" />
+      <option name="MAIN_CLASS_NAME" value="stockExchange.dataStructure.binomialHeap.BinomialHeapTest" />
       <option name="METHOD_NAME" value="getSize" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="binomialHeap.dataStructure.binomialHeap in binomialHeap" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="stockExchange.dataStructure.binomialHeap in binomialHeap" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="binomialHeap" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="binomialHeap.dataStructure.binomialHeap.BuyBinomialMaxHeap" />
+          <option name="PATTERN" value="stockExchange.dataStructure.binomialHeap.BuyBinomialMaxHeap" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="binomialHeap.dataStructure.binomialHeap" />
+      <option name="PACKAGE_NAME" value="stockExchange.dataStructure.binomialHeap" />
       <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -139,7 +156,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.binomialHeap.dataStructure.binomialHeap in binomialHeap" />
+        <item itemvalue="JUnit.stockExchange.dataStructure.binomialHeap in binomialHeap" />
         <item itemvalue="JUnit.BinomialHeapTest.getSize" />
         <item itemvalue="JUnit.BinomialHeapNodeTest.testSize" />
         <item itemvalue="JUnit.BinomialHashMapTest.mergeBinomialHashMap" />
@@ -211,7 +228,21 @@
       <option name="project" value="LOCAL" />
       <updated>1680358392879</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="update data set">
+      <created>1680361006607</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1680361006607</updated>
+    </task>
+    <task id="LOCAL-00010" summary="remove headers">
+      <created>1680361194453</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1680361194453</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -232,65 +263,68 @@
     <MESSAGE value="Update BinomialHashMapTest cases" />
     <MESSAGE value="Fix market run issues" />
     <MESSAGE value="Configure BinomialHashMap with SellBinomialMinHeap" />
-    <MESSAGE value="update data set" />
     <MESSAGE value="Update BinomialHeapNode.findMinNode()" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update BinomialHeapNode.findMinNode()" />
+    <MESSAGE value="update data set" />
+    <MESSAGE value="remove headers" />
+    <MESSAGE value="Update directory and package" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update directory and package" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/binomialHeap/market/ClearingHouse.java</url>
-          <line>32</line>
+          <url>file://$PROJECT_DIR$/src/main/java/stockExchange/market/ClearingHouse.java</url>
+          <line>59</line>
           <option name="timeStamp" value="16" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/binomialHeap/market/ClearingHouse.java</url>
-          <line>43</line>
+          <url>file://$PROJECT_DIR$/src/main/java/stockExchange/market/ClearingHouse.java</url>
+          <line>70</line>
           <option name="timeStamp" value="17" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/binomialHeap/market/ClearingHouse.java</url>
-          <line>52</line>
+          <url>file://$PROJECT_DIR$/src/main/java/stockExchange/market/ClearingHouse.java</url>
+          <line>79</line>
           <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/binomialHeap/dataStructure/binomialHeap/BinomialHashMapTest.java</url>
+          <url>file://$PROJECT_DIR$/src/test/java/stockExchange/dataStructure/binomialHeap/BinomialHashMapTest.java</url>
           <line>48</line>
           <option name="timeStamp" value="20" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/binomialHeap/dataStructure/binomialHeap/Prioritizer.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/stockExchange/dataStructure/binomialHeap/Prioritizer.java</url>
           <line>8</line>
           <option name="timeStamp" value="23" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/binomialHeap/dataStructure/binomialHeap/BinomialHashMapTest.java</url>
+          <url>file://$PROJECT_DIR$/src/test/java/stockExchange/dataStructure/binomialHeap/BinomialHashMapTest.java</url>
           <line>20</line>
           <option name="timeStamp" value="24" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/binomialHeap/dataStructure/binomialHeap/BinomialHashMapTest.java</url>
+          <url>file://$PROJECT_DIR$/src/test/java/stockExchange/dataStructure/binomialHeap/BinomialHashMapTest.java</url>
           <line>25</line>
           <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/binomialHeap/dataStructure/binomialHeap/BinomialHeapTest.java</url>
+          <url>file://$PROJECT_DIR$/src/test/java/stockExchange/dataStructure/binomialHeap/BinomialHeapTest.java</url>
           <line>19</line>
           <option name="timeStamp" value="29" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/binomialHeap/market/ClearingHouse.java</url>
-          <line>75</line>
+          <url>file://$PROJECT_DIR$/src/main/java/stockExchange/market/ClearingHouse.java</url>
+          <line>102</line>
           <option name="timeStamp" value="30" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/binomialHeap/market/ClearingHouse.java</url>
-          <line>48</line>
+          <url>file://$PROJECT_DIR$/src/main/java/stockExchange/market/ClearingHouse.java</url>
+          <line>75</line>
           <option name="timeStamp" value="31" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/binomialHeap/dataStructure/binomialHeap/BinomialHeap.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/stockExchange/dataStructure/binomialHeap/BinomialHeap.java</url>
           <line>53</line>
           <option name="timeStamp" value="32" />
         </line-breakpoint>

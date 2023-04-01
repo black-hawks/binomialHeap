@@ -1,4 +1,6 @@
-package binomialHeap.dataStructure.binomialHeap;
+package stockExchange.dataStructure.binomialHeap;
+
+import stockExchange.market.Order;
 
 // BinomialHeap
 public abstract class BinomialHeap {
@@ -98,7 +100,6 @@ public abstract class BinomialHeap {
                 temp1 = temp1.sibling;
             }
             temp1.sibling = temp2;
-        } else {
         }
         size += newNodeSize;
     }
