@@ -6,29 +6,27 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 /**
- * TransactionReader class reads transaction information from a CSV file and returns transaction data in Transaction objects.
- * <p>
- * The transaction data includes transaction ID, sender address, receiver address, transaction amount, and transaction timestamp.
+ * The OrderReader class is responsible for reading orders from a CSV file.
+ * It extends the CSVReader class to provide CSV reading functionality.
  */
 public class OrderReader extends CSVReader {
 
     /**
-     * Constructor for TransactionReader class.
+     * Constructs an OrderReader object with the given file path.
+     * Throws a FileNotFoundException if the file is not found.
      *
-     * @param filepath the file path of the CSV file to be read
-     * @throws FileNotFoundException if the CSV file is not found
+     * @param filepath the path of the CSV file to read orders from
+     * @throws FileNotFoundException if the file is not found
      */
     public OrderReader(String filepath) throws FileNotFoundException {
         super(filepath);
     }
 
-
     /**
-     * Gets the timestamp of the first transaction in the current period from the CSV file.
+     * Reads the time stamp from the CSV file.
      *
-     * @return the timestamp of the first transaction in the current period in milliseconds since the epoch,
-     * or -1 if there are no more transactions in the CSV file
-     * @throws IOException if an I/O error occurs
+     * @return the time stamp as a long integer
+     * @throws IOException if an I/O error occurs while reading the file
      */
     public long getTime() throws IOException {
         br.mark(100);
@@ -41,10 +39,10 @@ public class OrderReader extends CSVReader {
     }
 
     /**
-     * Gets the transaction data from the CSV file and creates a Transaction object.
+     * Reads an order from the CSV file.
      *
-     * @return a Transaction object containing the transaction data, or null if there are no more transactions in the CSV file
-     * @throws IOException if an I/O error occurs
+     * @return an Order object representing the order read from the file
+     * @throws IOException if an I/O error occurs while reading the file
      */
     public Order getOrder() throws IOException {
         String[] line = this.readLine();
