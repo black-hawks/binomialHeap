@@ -97,7 +97,6 @@ public class DataGenerator {
    *
    * @param csvFile the file path where the CSV records will be written
    * @param totalSeconds the total number of seconds for which records will be generated
-   * @throws IOException if an I/O error occurs while creating the CSV file
    */
   public static void generateRecordsForEverySecond(String csvFile, int totalSeconds) {
     int numberOfRecordsGenerated = 0;
@@ -126,7 +125,6 @@ public class DataGenerator {
    * Generates records for random timestamps and writes them to a CSV file.
 
    * @param csvFile the path of the CSV file to be created
-   * @throws IOException if an error occurs while creating or writing to the CSV file
    */
   public static void generateRecordsForRandomSeconds(String csvFile) {
 
@@ -209,22 +207,18 @@ public class DataGenerator {
   }
 
   /**
-   * Generates a random price between the specified minimum and maximum values.
+   *  Generates a random price
    *
-   * @param min the minimum price value
-   * @param max the maximum price value
-   * @return a randomly generated price as a double
+   * @return a price as a double between 195 and 197
    */
   public static double generateRandomPrice() {
     return generateRandomNumber(195, 197);
   }
 
   /**
-   * Generates a random quantity between the specified minimum and maximum values.
+   * Generates a random quantity
    *
-   * @param min the minimum quantity value
-   * @param max the maximum quantity value
-   * @return a randomly generated quantity as a long
+   * @return a random quantity of long type
    */
   public static long generateRandomQuantity() {
     return (long)generateRandomNumber(1, 999999);

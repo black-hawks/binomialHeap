@@ -5,7 +5,7 @@ import stockExchange.market.ClearingHouse;
 import java.io.IOException;
 
 /**
- * Simulates the Whole Project To generate Merkle Tree
+ * Simulates the Whole Project To generate Binomial Heap
  */
 public class Main {
 
