@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3e863386-7578-467c-b7bc-3573941556da" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/binomialHeap/market/ClearingHouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/binomialHeap/market/ClearingHouse.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -211,7 +212,21 @@
       <option name="project" value="LOCAL" />
       <updated>1680358392879</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="update data set">
+      <created>1680361006607</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1680361006607</updated>
+    </task>
+    <task id="LOCAL-00010" summary="remove headers">
+      <created>1680361194453</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1680361194453</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -232,26 +247,27 @@
     <MESSAGE value="Update BinomialHashMapTest cases" />
     <MESSAGE value="Fix market run issues" />
     <MESSAGE value="Configure BinomialHashMap with SellBinomialMinHeap" />
-    <MESSAGE value="update data set" />
     <MESSAGE value="Update BinomialHeapNode.findMinNode()" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update BinomialHeapNode.findMinNode()" />
+    <MESSAGE value="update data set" />
+    <MESSAGE value="remove headers" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove headers" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/binomialHeap/market/ClearingHouse.java</url>
-          <line>32</line>
+          <line>59</line>
           <option name="timeStamp" value="16" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/binomialHeap/market/ClearingHouse.java</url>
-          <line>43</line>
+          <line>70</line>
           <option name="timeStamp" value="17" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/binomialHeap/market/ClearingHouse.java</url>
-          <line>52</line>
+          <line>79</line>
           <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -281,12 +297,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/binomialHeap/market/ClearingHouse.java</url>
-          <line>75</line>
+          <line>102</line>
           <option name="timeStamp" value="30" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/binomialHeap/market/ClearingHouse.java</url>
-          <line>48</line>
+          <line>75</line>
           <option name="timeStamp" value="31" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">

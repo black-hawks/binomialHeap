@@ -10,12 +10,10 @@ import java.text.ParseException;
 import java.time.Duration;
 
 public class ClearingHouse {
-    private BuyBinomialMaxHeap buyOrders;
-    private BinomialHashMap sellOrders;
     private final OrderReader buyReader;
     private final OrderReader sellReader;
-    private BinomialHashMap sellOrdersPostTransaction;
-    private BuyBinomialMaxHeap buyOrdersPostTransaction;
+    private BinomialHashMap pendingSellOrders;
+    private BuyBinomialMaxHeap pendingBuyOrders;
 
     public ClearingHouse() throws FileNotFoundException {
         this.buyReader = new OrderReader("SortedBuyerDataFile1.csv", Duration.ofSeconds(1));
@@ -23,35 +21,42 @@ public class ClearingHouse {
     }
 
     public void initMarket() throws IOException, ParseException {
-        while (true) {
-            fetchOrders();
-            performTransactions();
+        while (!isEOD()) {
+            BuyBinomialMaxHeap buyOrders = fetchBuyOrders();
+            BinomialHashMap sellOrders = fetchSellOrders();
+            performTransactions(buyOrders, sellOrders);
         }
     }
 
-    private void fetchOrders() throws IOException, ParseException {
+    private BuyBinomialMaxHeap fetchBuyOrders() throws IOException, ParseException {
         long startTime = buyReader.getTime();
-        buyOrders = new BuyBinomialMaxHeap();
-        sellOrders = new BinomialHashMap();
+        BuyBinomialMaxHeap buyOrders = new BuyBinomialMaxHeap();
         while (buyReader.getTime() == startTime) {
             Order order = buyReader.getOrder();
             buyOrders.insert(order);
         }
+        if (pendingBuyOrders != null && pendingBuyOrders.getSize() != 0) {
+            buyOrders.merge(pendingBuyOrders.getRoot());
+        }
+        return buyOrders;
+    }
+
+    private BinomialHashMap fetchSellOrders() throws IOException, ParseException {
+        long startTime = sellReader.getTime();
+        BinomialHashMap sellOrders = new BinomialHashMap();
         while (sellReader.getTime() == startTime) {
             Order order = sellReader.getOrder();
             sellOrders.insert(order);
         }
-        if (buyOrdersPostTransaction != null && buyOrdersPostTransaction.getSize() != 0) {
-            buyOrders.merge(buyOrdersPostTransaction.getRoot());
+        if (pendingSellOrders != null) {
+            sellOrders.merge(pendingSellOrders);
         }
-        if (sellOrdersPostTransaction != null) {
-            sellOrders.merge(sellOrdersPostTransaction);
-        }
+        return sellOrders;
     }
 
-    private void performTransactions() {
-        buyOrdersPostTransaction = new BuyBinomialMaxHeap();
-        sellOrdersPostTransaction = new BinomialHashMap();
+    private void performTransactions(BuyBinomialMaxHeap buyOrders, BinomialHashMap sellOrders) {
+        pendingBuyOrders = new BuyBinomialMaxHeap();
+        pendingSellOrders = new BinomialHashMap();
         while (!buyOrders.isEmpty()) {
             Order order = buyOrders.extractHighestPriorityElement().getKey();
             Long quantityFulfilled = sellOrders.fetchOrder(order.getPrice(), order.getQuantity());
@@ -62,17 +67,18 @@ public class ClearingHouse {
                 } else {
                     long remainingQuantity = order.getQuantity() - quantityFulfilled;
                     order.setQuantity(remainingQuantity);
-                    buyOrdersPostTransaction.insert(order);
+                    pendingBuyOrders.insert(order);
                     System.out.println(order + " partially fulfilled, remaining quantity: " + remainingQuantity);
                 }
-
             } else {
-                //insert the node inot the new binomial tree
-                buyOrdersPostTransaction.insert(order);
-//                System.out.println(order + " not fulfilled");
+                //insert the node in the new binomial tree
+                pendingBuyOrders.insert(order);
             }
-
         }
-        sellOrdersPostTransaction = sellOrders;
+        pendingSellOrders = sellOrders;
+    }
+
+    private boolean isEOD() throws IOException, ParseException {
+        return buyReader.getTime() == -1 || sellReader.getTime() == -1;
     }
 }
