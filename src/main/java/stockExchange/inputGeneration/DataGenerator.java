@@ -1,8 +1,7 @@
-package inputGeneration;
+package stockExchange.inputGeneration;
 
 import java.io.FileWriter;
 import java.io.IOException;
-import java.sql.Time;
 import java.sql.Timestamp;
 import java.util.Calendar;
 
