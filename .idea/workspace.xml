@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e863386-7578-467c-b7bc-3573941556da" name="Changes" comment="Update BinomialHashMapTest cases">
-      <change afterPath="$PROJECT_DIR$/src/test/java/binomialHeap/dataStructure/binomialHeap/BinomialHeapNodeTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buyOrder.csv" beforeDir="false" afterPath="$PROJECT_DIR$/buyOrder.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sellOrder.csv" beforeDir="false" afterPath="$PROJECT_DIR$/sellOrder.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/binomialHeap/dataStructure/binomialHeap/BinomialHeap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/binomialHeap/dataStructure/binomialHeap/BinomialHeap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/binomialHeap/market/ClearingHouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/binomialHeap/market/ClearingHouse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/binomialHeap/market/OrderReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/binomialHeap/market/OrderReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/binomialHeap/dataStructure/binomialHeap/BinomialHeapTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/binomialHeap/dataStructure/binomialHeap/BinomialHeapTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="3e863386-7578-467c-b7bc-3573941556da" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -82,7 +73,7 @@
       <module name="binomialHeap" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="binomialHeap.dataStructure.binomialHeap.*" />
+          <option name="PATTERN" value="binomialHeap.dataStructure.binomialHeap.BuyBinomialMaxHeap" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -98,7 +89,7 @@
       <module name="binomialHeap" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="binomialHeap.dataStructure.binomialHeap.*" />
+          <option name="PATTERN" value="binomialHeap.dataStructure.binomialHeap.BuyBinomialMaxHeap" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -114,7 +105,7 @@
       <module name="binomialHeap" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="binomialHeap.dataStructure.binomialHeap.*" />
+          <option name="PATTERN" value="binomialHeap.dataStructure.binomialHeap.BuyBinomialMaxHeap" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -130,7 +121,7 @@
       <module name="binomialHeap" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="binomialHeap.dataStructure.binomialHeap.*" />
+          <option name="PATTERN" value="binomialHeap.dataStructure.binomialHeap.BuyBinomialMaxHeap" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -187,7 +178,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680346887480</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Fix market run issues">
+      <created>1680354862808</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1680354862808</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -206,7 +204,8 @@
     <MESSAGE value="update BinomialHashMap.fetchOrder" />
     <MESSAGE value="Fix binomialHashMap issues" />
     <MESSAGE value="Update BinomialHashMapTest cases" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update BinomialHashMapTest cases" />
+    <MESSAGE value="Fix market run issues" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix market run issues" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

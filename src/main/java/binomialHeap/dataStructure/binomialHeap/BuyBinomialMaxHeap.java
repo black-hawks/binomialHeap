@@ -47,11 +47,4 @@ public class BuyBinomialMaxHeap extends BinomialHeap {
         reStructureHeapAfterExtract(maxNode);
         return maxNode;
     }
-
-    public Order peekHighestOrder() {
-        if (Nodes == null)
-            return null;
-        BinomialHeapNode maxNode = Nodes.findMaxNode();
-        return maxNode.getKey();
-    }
 }

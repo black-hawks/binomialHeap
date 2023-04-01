@@ -181,6 +181,13 @@ public abstract class BinomialHeap {
         return Nodes;
     }
 
+    public Order peekHighestOrder() {
+        if (Nodes == null)
+            return null;
+        BinomialHeapNode maxNode = Nodes.findMaxNode();
+        return maxNode.getKey();
+    }
+
 
 }
 
