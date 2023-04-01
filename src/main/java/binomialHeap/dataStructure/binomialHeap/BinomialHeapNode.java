@@ -37,21 +37,15 @@ public class BinomialHeapNode {
     // Method 2
     // To find minimum node
     public BinomialHeapNode findMinNode() {
-
-        // this keyword refers to current instance itself
-        BinomialHeapNode x = this, y = this;
-        double min = x.key.getPrice();
-
+        BinomialHeapNode min = this;
+        BinomialHeapNode x = this.sibling;
         while (x != null) {
-            if (x.key.getPrice() < min) {
-                y = x;
-                min = x.key.getPrice();
+            if (Prioritizer.minHeapPrioritizer(x, min)) {
+                min = x;
             }
-
             x = x.sibling;
         }
-
-        return y;
+        return min;
     }
 
     public BinomialHeapNode findMaxNode() {

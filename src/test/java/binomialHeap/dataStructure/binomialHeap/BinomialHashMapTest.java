@@ -25,7 +25,7 @@ class BinomialHashMapTest {
         binomialHashMap.insert(order2);
         long quantityFulfilled = binomialHashMap.fetchOrder(100, 9000);
         Assertions.assertEquals(9000, quantityFulfilled);
-        BuyBinomialMaxHeap remainingSellOrders = binomialHashMap.getBinomialHashMap().get(100.0);
+        SellBinomialMinHeap remainingSellOrders = binomialHashMap.getBinomialHashMap().get(100.0);
         Assertions.assertEquals(2, remainingSellOrders.getSize());
         Order remainingOrder1 = remainingSellOrders.extractHighestPriorityElement().getKey();
         Assertions.assertEquals(Orderer.ClientOrder, remainingOrder1.getOrderedBy());
@@ -55,12 +55,12 @@ class BinomialHashMapTest {
         binomialHashMap2.insert(order2);
         binomialHashMap2.insert(order3);
         binomialHashMap1.merge(binomialHashMap2);
-        BuyBinomialMaxHeap mergedSellOrders1 = binomialHashMap1.getBinomialHashMap().get(100.0);
+        SellBinomialMinHeap mergedSellOrders1 = binomialHashMap1.getBinomialHashMap().get(100.0);
         Assertions.assertEquals(2, mergedSellOrders1.getSize());
         Assertions.assertEquals(order2, mergedSellOrders1.extractHighestPriorityElement().getKey());
         Assertions.assertEquals(order1, mergedSellOrders1.extractHighestPriorityElement().getKey());
 
-        BuyBinomialMaxHeap mergedSellOrders2 = binomialHashMap1.getBinomialHashMap().get(101.0);
+        SellBinomialMinHeap mergedSellOrders2 = binomialHashMap1.getBinomialHashMap().get(101.0);
         Assertions.assertEquals(1, mergedSellOrders2.getSize());
         Assertions.assertEquals(order3, mergedSellOrders2.extractHighestPriorityElement().getKey());
 //        Assertions.assertEquals(order3, mergedSellOrders.extractHighestPriorityElement().getKey());
