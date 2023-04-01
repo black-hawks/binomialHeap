@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e863386-7578-467c-b7bc-3573941556da" name="Changes" comment="Update directory and package">
-      <change afterPath="$PROJECT_DIR$/buyer.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/stockExchange/dataStructure/binomialHashMap/BinomialHashMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stockExchange/dataStructure/binomialHashMap/BinomialHashMap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/stockExchange/market/ClearingHouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stockExchange/market/ClearingHouse.java" afterDir="false" />
-    </list>
+    <list default="true" id="3e863386-7578-467c-b7bc-3573941556da" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -243,7 +237,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680373012871</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Add log entries">
+      <created>1680378749103</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1680378749103</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -268,7 +269,8 @@
     <MESSAGE value="update data set" />
     <MESSAGE value="remove headers" />
     <MESSAGE value="Update directory and package" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update directory and package" />
+    <MESSAGE value="Add log entries" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add log entries" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>

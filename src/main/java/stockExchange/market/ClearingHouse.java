@@ -78,6 +78,12 @@ public class ClearingHouse {
         return buyReader.getTime() == -1 || sellReader.getTime() == -1;
     }
 
+    /**
+     * Gets the current time according to the time mentioned in fetched order.
+     *
+     * @return a Date object containing the current market date, or null if there are no more transactions in the CSV file
+     * @throws IOException if an I/O error occurs
+     */
     public Date getCurrentTime() throws IOException {
         long currentTime = buyReader.getTime();
         if (currentTime == -1) {
