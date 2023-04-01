@@ -22,38 +22,40 @@ public class BinomialHashMap {
     }
 
     public Long fetchOrder(double price, long quantity) {
-        if(!binomialHashMap.containsKey(price) ) {
-            return null;
+        long quantityFulfilled = 0;
+        if (!binomialHashMap.containsKey(price)) {
+            return quantityFulfilled;
         }
         BuyBinomialMaxHeap binomialHeap = binomialHashMap.get(price);
         //checking if the binominal tree is empty
-        if(binomialHeap.isEmpty()){
-            return null;
+        if (binomialHeap.isEmpty()) {
+            return quantityFulfilled;
         }
         Order order = binomialHeap.peekHighestOrder();
-        if(order.quantity == quantity) {
-            quantity = 0;
+        if (order.quantity == quantity) {
+            quantityFulfilled = quantity;
             binomialHeap.extractHighestPriorityElement();
         } else if (order.quantity < quantity) {
-            quantity = quantity - order.quantity;
+//            quantity = quantity - order.quantity;
+            quantityFulfilled = order.quantity;
             binomialHeap.extractHighestPriorityElement();
-            fetchOrder(price, quantity);
+            quantityFulfilled += fetchOrder(price, quantity - quantityFulfilled);
         } else {
             order.quantity = order.quantity - quantity;
-            quantity = 0;// this means that we have processed the quantity of the buy shares
+            quantityFulfilled = quantity;// this means that we have processed the quantity of the buy shares
         }
-        if(binomialHeap.isEmpty()){
+        if (binomialHeap.isEmpty()) {
             binomialHashMap.remove(price);
         }
-        return quantity;
+        return quantityFulfilled;
 
     }
 
-    public void merge(BinomialHashMap newBinomialHashMap){
+    public void merge(BinomialHashMap newBinomialHashMap) {
         for (Map.Entry<Double, BuyBinomialMaxHeap> entry : newBinomialHashMap.getBinomialHashMap().entrySet()) {
             Double key = entry.getKey();
             BuyBinomialMaxHeap value = entry.getValue();
-        
+
             if (this.binomialHashMap.containsKey(key)) {
                 // Handle key conflict by merging the values
                 BuyBinomialMaxHeap existingValue = this.binomialHashMap.get(key);
