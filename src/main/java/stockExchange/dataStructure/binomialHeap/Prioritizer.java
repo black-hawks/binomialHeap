@@ -4,8 +4,25 @@ import stockExchange.market.Order;
 
 import java.util.Random;
 
+/**
+ * The Prioritizer class contains static methods for prioritizing orders in a binomial heap data structure
+ * based on either min-heap or max-heap priority.
+ */
 public class Prioritizer {
 
+    /**
+     * Determines the priority order of two nodes in a min-heap.
+     *
+     * Priority Order is determined in following order
+     * First. Order with the Lowest Price get the highest Priority
+     * Second. If two order has same price then Order which was placed earlier get the highest Priority
+     * Third. If Price and Timestamp of orders are same then, the Priority is determined by who was the Orderer(Enum)
+     * If all the above details matches then priority is determined in random order.
+     *
+     * @param newNode the new node to compare
+     * @param nextNode the next node to compare
+     * @return true if newNode has higher priority than nextNode; false otherwise
+     */
     public static boolean minHeapPrioritizer(BinomialHeapNode newNode, BinomialHeapNode nextNode) {
 
         Order newOrder = newNode.key, nextOrder = nextNode.key;
@@ -26,6 +43,19 @@ public class Prioritizer {
 
     }
 
+    /**
+     * Determines the priority order of two nodes in a max-heap.
+     *
+     *  Priority Order is determined in following order
+     *  First. Order with the Highest Price get the highest Priority
+     *  Second. If two order has same price then Order which was placed earlier get the highest Priority
+     *  Third. If Price and Timestamp of orders are same then, the Priority is determined by who was the Orderer(Enum)
+     *  If all the above details matches then priority is determined in random order.
+     *
+     * @param newNode the new node to compare
+     * @param nextNode the next node to compare
+     * @return true if newNode has higher priority than nextNode; false otherwise
+     */
     public static boolean maxHeapPrioritizer(BinomialHeapNode newNode, BinomialHeapNode nextNode) {
 
         Order newOrder = newNode.key, nextOrder = nextNode.key;
@@ -44,6 +74,15 @@ public class Prioritizer {
 
     }
 
+    /**
+     * Helper method that determines the priority order of two nodes based on timestamp and orderer priority.
+     *
+     * @param newOrder the new order to compare
+     * @param nextOrder the next order to compare
+     * @param newNode the new node to compare
+     * @param nextNode the next node to compare
+     * @return the node with higher priority
+     */
     private static BinomialHeapNode priotizeByTimeStampOrOrderedBy(Order newOrder, Order nextOrder, BinomialHeapNode newNode, BinomialHeapNode nextNode) {
         // if time is less for new order
         BinomialHeapNode firstNode;

@@ -4,9 +4,19 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * The ExternalMergeSort class reads an input CSV file, divides it into smaller chunks,
+ * sorts them using merge sort algorithm, and merges them back to write a sorted output CSV file.
+ */
 public class ExternalMergeSort {
 
-  // Divide the input file into smaller chunks, sort them, and merge them back
+  /**
+   * Sorts the input CSV file and writes the sorted output CSV file.
+   *
+   * @param inputFile The path of the input CSV file.
+   * @param outputFile The path of the output CSV file.
+   * @throws IOException If an I/O error occurs while reading/writing the file.
+   */
   public void sort(String inputFile, String outputFile) throws IOException {
     // Open the input CSV file for reading
     BufferedReader reader = new BufferedReader(new FileReader(inputFile));
@@ -44,6 +54,13 @@ public class ExternalMergeSort {
 
   }
 
+  /**
+   * Sorts the list of CSV entries using the merge sort algorithm.
+   *
+   * @param entries The list of CSV entries to be sorted.
+   * @param left The starting index of the sub-list to be sorted.
+   * @param right The ending index of the sub-list to be sorted.
+   */
   public static void mergeSort(List<String[]> entries, int left, int right) {
     if (left < right) {
       int mid = left + (right - left) / 2;
@@ -53,6 +70,14 @@ public class ExternalMergeSort {
     }
   }
 
+  /**
+   * Merges two sub-lists of CSV entries, that are already sorted.
+   *
+   * @param entries The list of CSV entries.
+   * @param left The starting index of the left sub-list.
+   * @param mid The ending index of the left sub-list.
+   * @param right The ending index of the right sub-list.
+   */
    public static void merge(List<String[]> entries, int left, int mid, int right) {
      List<String[]> leftList = new ArrayList<>(entries.subList(left, mid + 1));
      List<String[]> rightList = new ArrayList<>(entries.subList(mid + 1, right + 1));

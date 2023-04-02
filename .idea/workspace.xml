@@ -4,17 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e863386-7578-467c-b7bc-3573941556da" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/CompareDataStructure.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/stockExchange/market/ClearingHouseList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="3e863386-7578-467c-b7bc-3573941556da" name="Changes" comment="Add log entries">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BinomialHeap.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HeapUML.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stockExchange/dataStructure/binomialHeap/BinomialHeapNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stockExchange/dataStructure/binomialHeap/BinomialHeapNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stockExchange/dataStructure/binomialHeap/Prioritizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stockExchange/dataStructure/binomialHeap/Prioritizer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
   </component>
   <component name="CoverageOptionsProvider">
     <option name="myAddOrReplace" value="0" />
@@ -43,26 +48,33 @@
       </MavenGeneralSettings>
     </option>
   </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
+  </component>
   <component name="ProjectId" id="2Nhe18RmV7e4tykLrsl0wlUsH7r" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.editor&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "preferences.editor"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -153,6 +165,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1680120535050</updated>
+      <workItem from="1680384819713" duration="1226000" />
     </task>
     <task id="LOCAL-00001" summary="Test commit">
       <created>1680273907483</created>
@@ -255,6 +268,9 @@
     <option name="localTasksCounter" value="15" />
     <servers />
   </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
@@ -303,16 +319,16 @@
     </pin-to-top-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/binomialHeap$BinomialHashMapTest_testLessBuyerQuantity.ic" NAME="BinomialHashMapTest.testLessBuyerQuantity Coverage Results" MODIFIED="1680344171412" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>binomialHeap.dataStructure.binomialHeap.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/binomialHeap$Main.ic" NAME="Main Coverage Results" MODIFIED="1680335776044" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/binomialHeap$BinomialHashMapTest.ic" NAME="BinomialHashMapTest Coverage Results" MODIFIED="1680346858302" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>binomialHeap.dataStructure.binomialHeap.*</FILTER>
-    </SUITE>
     <SUITE FILE_PATH="coverage/binomialHeap$BinomialHeapTest_insert.ic" NAME="BinomialHeapTest.insert Coverage Results" MODIFIED="1680273814371" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>binomialHeap.dataStructure.binomialHeap.*</FILTER>
     </SUITE>
+    <SUITE FILE_PATH="coverage/binomialHeap$BinomialHashMapTest_testLessBuyerQuantity.ic" NAME="BinomialHashMapTest.testLessBuyerQuantity Coverage Results" MODIFIED="1680344171412" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>binomialHeap.dataStructure.binomialHeap.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/binomialHeap$BinomialHashMapTest.ic" NAME="BinomialHashMapTest Coverage Results" MODIFIED="1680346858302" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>binomialHeap.dataStructure.binomialHeap.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/binomialHeap$Main.ic" NAME="Main Coverage Results" MODIFIED="1680335776044" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/binomialHeap$BinomialHashMapTest_mergeBinomialHashMap.ic" NAME="BinomialHashMapTest.mergeBinomialHashMap Coverage Results" MODIFIED="1680343499913" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>binomialHeap.dataStructure.binomialHeap.*</FILTER>
     </SUITE>
